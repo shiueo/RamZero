@@ -158,10 +158,10 @@ export default function Home() {
       </div>
 
       {/* 로그 및 클리어 버튼 */}
-      <div className="flex  flex-col">
+      <div className="flex flex-col">
         <div
           ref={logContainerRef}
-          className="w-full flex-1 overflow-y-auto rounded-lg p-4 shadow-md min-h-64"
+          className="min-h-64 w-full flex-1 overflow-y-auto rounded-lg p-4 shadow-md"
           style={{ maxHeight: '50vh' }} // 화면 절반 차지하게
         >
           {result.length === 0
