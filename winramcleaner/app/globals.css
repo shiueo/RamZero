@@ -31,3 +31,48 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: Pretendard;
+  font-weight: 400;
+  src:
+    local('Pretendard Regular'),
+    url('/fonts/Pretendard/Pretendard-Regular.woff') format('woff'),
+    url('/fonts/Pretendard/Pretendard-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Pretendard;
+  font-weight: 500;
+  src:
+    local('Pretendard Medium'),
+    url('/fonts/Pretendard/Pretendard-Medium.woff') format('woff'),
+    url('/fonts/Pretendard/Pretendard-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Pretendard;
+  font-weight: 600;
+  src:
+    local('Pretendard SemiBold'),
+    url('/fonts/Pretendard/Pretendard-SemiBold.woff') format('woff'),
+    url('/fonts/Pretendard/Pretendard-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Pretendard;
+  font-weight: 700;
+  src:
+    local('Pretendard Bold'),
+    url('/fonts/Pretendard/Pretendard-Bold.woff') format('woff'),
+    url('/fonts/Pretendard/Pretendard-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Pretendard;
+  font-weight: 800;
+  src:
+    local('Pretendard ExtraBold'),
+    url('/fonts/Pretendard/Pretendard-ExtraBold.woff') format('woff'),
+    url('/fonts/Pretendard/Pretendard-ExtraBold.woff2') format('woff2');
+}

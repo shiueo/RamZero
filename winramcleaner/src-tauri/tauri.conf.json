@@ -56,10 +56,12 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 500,
         "resizable": true,
         "title": "winramcleaner",
-        "width": 800
+        "width": 400,
+        "minWidth": 400,
+        "minHeight": 500    
       }
     ]
   }
