@@ -77,24 +77,24 @@ pub async fn execute_rammap_commands() -> Result<String, String> {
     }
 
     let mut commands = HashMap::new();
-    commands.insert("-Ew", "Empty Working Sets");
-    commands.insert("-Es", "Empty System Working Sets");
-    commands.insert("-Em", "Empty File Cache");
-    commands.insert("-Et", "Empty Modified Page List");
-    commands.insert("-E0", "Empty Standby List");
+    commands.insert(vec!["-accepteula", "-Ew"], "Empty Working Sets");
+    commands.insert(vec!["-accepteula", "-Es"], "Empty System Working Sets");
+    commands.insert(vec!["-accepteula", "-Em"], "Empty File Cache");
+    commands.insert(vec!["-accepteula", "-Et"], "Empty Modified Page List");
+    commands.insert(vec!["-accepteula", "-E0"], "Empty Standby List");
 
     let mut output_string = String::new();
 
-    for (cmd, description) in commands.iter() {
+    for (args, description) in commands.iter() {
         let output = Command::new(&rammap_path)
-            .arg(cmd)
+            .args(args)
             .output()
             .map_err(|e| log_with_timestamp(&e.to_string()))?;
 
         let log_entry = format!(
-            "[{}] Executed command {} ({}): {}\n",
+            "[{}] Executed command {:?} ({}): {}\n",
             Utc::now().format("%Y-%m-%d %H:%M:%S"),
-            cmd,
+            args,
             description,
             String::from_utf8_lossy(&output.stdout)
         );
