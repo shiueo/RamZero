@@ -100,7 +100,7 @@ pub async fn execute_rammap_commands() -> Result<String, String> {
         );
         output_string.push_str(&log_entry);
     }
-    output_string.push_str(&"=".repeat(60));
+    output_string.push_str(&"=".repeat(36));
 
     Ok(output_string)
 }
