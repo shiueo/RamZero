@@ -77,6 +77,7 @@ pub async fn execute_rammap_commands() -> Result<String, String> {
     }
 
     let commands = vec![
+        "-accepteula", // eula 동의
         "-Ew", // Empty Working Sets
         "-Es", // Empty System Working Sets
         "-Em", // Empty File Cache
