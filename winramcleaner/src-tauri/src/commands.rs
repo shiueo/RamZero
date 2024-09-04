@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::fs::{File, create_dir_all};
 use std::io::Write;
 use std::path::Path;
@@ -71,36 +72,35 @@ async fn download_rammap() -> Result<String, Box<dyn std::error::Error>> {
 #[tauri::command]
 pub async fn execute_rammap_commands() -> Result<String, String> {
     let rammap_path = get_rammap_path();
-
     if !Path::new(&rammap_path).exists() {
         return Err(log_with_timestamp("RamMap executable not found. Please ensure it's downloaded."));
     }
 
-    let commands = vec![
-        "-Ew", // Empty Working Sets
-        "-Es", // Empty System Working Sets
-        "-Em", // Empty File Cache
-        "-Et", // Empty Modified Page List
-        "-E0", // Empty Standby List
-    ];
+    let mut commands = HashMap::new();
+    commands.insert("-Ew", "Empty Working Sets");
+    commands.insert("-Es", "Empty System Working Sets");
+    commands.insert("-Em", "Empty File Cache");
+    commands.insert("-Et", "Empty Modified Page List");
+    commands.insert("-E0", "Empty Standby List");
 
     let mut output_string = String::new();
 
-    for cmd in commands {
+    for (cmd, description) in commands.iter() {
         let output = Command::new(&rammap_path)
             .arg(cmd)
             .output()
             .map_err(|e| log_with_timestamp(&e.to_string()))?;
 
         let log_entry = format!(
-            "[{}] Executed command {}: {}\n",
+            "[{}] Executed command {} ({}): {}\n",
             Utc::now().format("%Y-%m-%d %H:%M:%S"),
             cmd,
+            description,
             String::from_utf8_lossy(&output.stdout)
         );
         output_string.push_str(&log_entry);
     }
-    output_string.push_str(&"=".repeat(36));
 
+    output_string.push_str(&"=".repeat(36));
     Ok(output_string)
 }

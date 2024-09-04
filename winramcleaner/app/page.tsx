@@ -161,8 +161,7 @@ export default function Home() {
       <div className="flex flex-col">
         <div
           ref={logContainerRef}
-          className="min-h-64 w-full flex-1 overflow-y-auto rounded-lg p-4 shadow-md"
-          style={{ maxHeight: '50vh' }} // 화면 절반 차지하게
+          className="min-h-64 w-full max-h-[45vh] flex-1 overflow-y-auto rounded-lg p-4 shadow-md"
         >
           {result.length === 0
             ? 'Logs will appear here...'
@@ -184,7 +183,7 @@ export default function Home() {
             <div className="max-h-[70vh] overflow-y-auto">
               {isModalOpen === 'help' && (
                 <div>
-                  <h2 className="mb-4 text-xl font-bold">
+                  <h2 className=" mb-4 text-xl font-bold">
                     About WinRamCleaner
                   </h2>
                   <p className="mb-4">
