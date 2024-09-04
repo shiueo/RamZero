@@ -38,7 +38,7 @@ const config: Config = {
   },
   plugins: [typographyPlugin, daisyui],
   daisyui: {
-    themes: ['luxury'],
+    themes: ['dark'],
   },
 }
 

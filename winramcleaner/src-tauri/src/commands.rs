@@ -4,7 +4,7 @@ use std::path::Path;
 use std::process::Command;
 use reqwest::get;
 use zip::ZipArchive;
-use chrono::Utc; // 타임스탬프를 생성하기 위해 chrono 크레이트 추가
+use chrono::Utc;
 
 const RAMMAP_URL: &str = "https://download.sysinternals.com/files/RAMMap.zip";
 
@@ -100,7 +100,7 @@ pub async fn execute_rammap_commands() -> Result<String, String> {
         );
         output_string.push_str(&log_entry);
     }
-    output_string.push_str(&"=".repeat(17));
-    
+    output_string.push_str(&"=".repeat(60));
+
     Ok(output_string)
 }
