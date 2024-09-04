@@ -83,14 +83,13 @@ export default function Home() {
   }
 
   const formatTime = (seconds: number) => {
-    const days = Math.floor(seconds / 86400)  // 1 day = 86400 seconds
+    const days = Math.floor(seconds / 86400) // 1 day = 86400 seconds
     const hours = Math.floor((seconds % 86400) / 3600)
     const minutes = Math.floor((seconds % 3600) / 60)
     const remainingSeconds = seconds % 60
 
     return `${days}d ${hours}h ${minutes}m ${remainingSeconds}s`
-}
-
+  }
 
   const handleClearLogs = () => {
     setResult([])
@@ -128,7 +127,7 @@ export default function Home() {
         <div className="flex w-full max-w-4xl flex-col items-center space-y-4">
           <div className="flex space-x-4">
             <button onClick={handleEnsureRamMap} className="btn btn-primary">
-              Run RamMap
+              Install RamMap
             </button>
             <button onClick={handleExecuteCommands} className="btn btn-error">
               Execute Commands
@@ -146,7 +145,7 @@ export default function Home() {
               value={inputDuration}
               onChange={(e) => setInputDuration(parseInt(e.target.value))}
               className="input input-bordered input-primary w-32"
-              placeholder='(sec)'
+              placeholder="(sec)"
             />
             <button
               onClick={handleSetTimerDuration}
@@ -159,10 +158,10 @@ export default function Home() {
       </div>
 
       {/* 로그 및 클리어 버튼 */}
-      <div className="flex flex-1 flex-col">
+      <div className="flex  flex-col">
         <div
           ref={logContainerRef}
-          className="w-full flex-1 overflow-y-auto rounded-lg p-4 shadow-md"
+          className="w-full flex-1 overflow-y-auto rounded-lg p-4 shadow-md min-h-64"
           style={{ maxHeight: '50vh' }} // 화면 절반 차지하게
         >
           {result.length === 0
