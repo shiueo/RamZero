@@ -79,15 +79,18 @@ export default function Home() {
     }
 
     setTimerDuration(inputDuration)
-    toast.success(`Timer updated to ${inputDuration} seconds.`)
+    toast.success(`Timer updated to ${formatTime(inputDuration)} seconds.`)
   }
 
   const formatTime = (seconds: number) => {
-    const hours = Math.floor(seconds / 3600)
+    const days = Math.floor(seconds / 86400)  // 1 day = 86400 seconds
+    const hours = Math.floor((seconds % 86400) / 3600)
     const minutes = Math.floor((seconds % 3600) / 60)
     const remainingSeconds = seconds % 60
-    return `${hours}h ${minutes}m ${remainingSeconds}s`
-  }
+
+    return `${days}d ${hours}h ${minutes}m ${remainingSeconds}s`
+}
+
 
   const handleClearLogs = () => {
     setResult([])
@@ -143,6 +146,7 @@ export default function Home() {
               value={inputDuration}
               onChange={(e) => setInputDuration(parseInt(e.target.value))}
               className="input input-bordered input-primary w-32"
+              placeholder='(sec)'
             />
             <button
               onClick={handleSetTimerDuration}
