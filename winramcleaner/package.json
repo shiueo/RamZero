@@ -9,7 +9,8 @@
     "format:write": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "format": "prettier \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "lint": "next lint",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "icon" : "tauri icon ./icon.png"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.15",
