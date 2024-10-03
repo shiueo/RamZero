@@ -30,9 +30,9 @@ pub async fn check_rammap_exists() -> Result<bool, String> {
     let rammap_path = get_rammap_path();
 
     if Path::new(&rammap_path).exists() {
-        Ok(true) // RamMap이 존재하면 true 반환
+        Ok(true) 
     } else {
-        Ok(false) // RamMap이 존재하지 않으면 false 반환
+        Ok(false) 
     }
 }
 
