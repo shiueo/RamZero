@@ -184,62 +184,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/*
-      <div className="flex flex-1 flex-col items-center justify-center px-4 py-4 text-base-content">
-        <div className="flex w-full max-w-4xl flex-col items-center space-y-4">
-          <div className="flex space-x-4">
-            <Button onClick={handleEnsureRamMap} className="btn btn-primary">
-              Install RamMap
-            </Button>
-            <Button onClick={handleExecuteCommands} className="btn btn-error">
-              Execute Commands
-            </Button>
-          </div>
-          <div className="mt-4 text-lg">
-            {timeRemaining !== null
-              ? `Next cleanup in: ${formatTime(timeRemaining)}`
-              : 'Timer not set'}
-          </div>
-          <div className="mt-4 flex items-center space-x-4">
-            <input
-              type="number"
-              id="timerInput"
-              value={inputDuration}
-              onChange={(e) => setInputDuration(parseInt(e.target.value))}
-              className="input input-bordered input-primary w-32"
-              placeholder="(sec)"
-            />
-            <Button
-              onClick={handleSetTimerDuration}
-              className="btn btn-primary"
-            >
-              Update Timer
-            </Button>
-          </div>
-        </div>
-      </div>*/}
-
-      {/* 로그 및 클리어 버튼 */}
-
-      {/*
-      <div className="flex flex-col">
-        <div
-          ref={logContainerRef}
-          className="min-h-64 w-full max-h-[45vh] flex-1 overflow-y-auto rounded-lg p-4 shadow-md"
-        >
-          {result.length === 0
-            ? 'Logs will appear here...'
-            : result.map((log, index) => (
-                <p key={index} className="whitespace-pre-wrap">
-                  {log}
-                </p>
-              ))}
-        </div>
-        <Button onClick={handleClearLogs} className="btn btn-warning w-full">
-          Clear Logs
-        </Button>
-      </div>*/}
-
       {/* 모달 */}
       <Modal
         isOpen={showGithubModal}
