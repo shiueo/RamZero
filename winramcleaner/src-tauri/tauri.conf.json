@@ -7,7 +7,7 @@
     "distDir": "../out"
   },
   "package": {
-    "productName": "winramcleaner",
+    "productName": "ramzero",
     "version": "0.2.0"
   },
   "tauri": {
@@ -29,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.shiueo.winramcleaner",
+      "identifier": "com.shiueo.ramzero",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
