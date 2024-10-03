@@ -3,11 +3,7 @@ import typographyPlugin from '@tailwindcss/typography'
 import daisyui from 'daisyui'
 
 const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/**/*.{js,mjs,jsx,ts,tsx,mdx}'],
   theme: {
     fontFamily: {
       pretendard: ['Pretendard', 'sans-serif'],

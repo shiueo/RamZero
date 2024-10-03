@@ -1,6 +1,6 @@
 {
   "name": "winramcleaner",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,11 +10,14 @@
     "format": "prettier \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "lint": "next lint",
     "tauri": "tauri",
-    "icon" : "tauri icon ./icon.png"
+    "icon": "tauri icon ./icon.png"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.15",
     "@tauri-apps/api": "^1.6.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.10.0",
+    "lucide-react": "^0.447.0",
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",

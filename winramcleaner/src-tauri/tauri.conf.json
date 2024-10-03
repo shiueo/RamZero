@@ -56,12 +56,12 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 700,
+        "height": 620,
         "resizable": true,
         "title": "WinRamCleaner",
-        "width": 400,
-        "minWidth": 400,
-        "minHeight": 700
+        "width": 600,
+        "minWidth": 600,
+        "minHeight": 620
       }
     ]
   }

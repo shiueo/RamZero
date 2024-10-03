@@ -6,6 +6,7 @@ mod commands;
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
+        commands::check_rammap_exists,
         commands::ensure_rammap,
         commands::execute_rammap_commands
       ])
