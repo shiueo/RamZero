@@ -160,7 +160,7 @@ export default function Home() {
           This project is open source. You can find the code and contribute on
           GitHub.
         </p>
-        <Link href="https://github.com/shiueo/WinRamCleaner" target="_tauri">
+        <Link href="https://github.com/shiueo/RamZero" target="_tauri">
           <p className="mt-4 underline">View on GitHub</p>
         </Link>
       </Modal>
@@ -168,10 +168,10 @@ export default function Home() {
       <Modal
         isOpen={showHelpModal}
         onClose={() => setShowHelpModal(false)}
-        title="About WinRamCleaner"
+        title="About RamZero"
       >
         <p className="mb-4">
-          WinRamCleaner is a tool designed to optimize and manage your
+          RamZero is a tool designed to optimize and manage your
           system&apos;s memory usage. With scheduled cleanups and manual
           commands, you can ensure your system runs smoothly by clearing
           unnecessary data from the RAM.
