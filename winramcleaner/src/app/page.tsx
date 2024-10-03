@@ -131,7 +131,7 @@ export default function Home() {
       <div className="absolute bottom-4 right-4 flex items-center text-white opacity-70">
         <User size={18} className="mr-2" />
         <span className="text-sm">
-          Created by{' '}
+          Made with ♥ by{' '}
           <Link href="https://shiueo.xyz" target="_tauri" className="underline">
             shiüo
           </Link>
