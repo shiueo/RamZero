@@ -176,6 +176,7 @@ export default function Home() {
           commands, you can ensure your system runs smoothly by clearing
           unnecessary data from the RAM.
         </p>
+        <hr/>
         <h3 className="mb-2 text-lg font-semibold">Features:</h3>
         <ul className="mb-4 list-inside list-disc space-y-2">
           <li>Automated memory cleanup at user-defined intervals.</li>
