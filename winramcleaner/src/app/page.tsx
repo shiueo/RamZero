@@ -1,55 +1,43 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
-import toast from 'react-hot-toast'
-import {
-  Github,
-  HelpCircle,
-  User,
-  Settings,
-  Play,
-  Pause,
-  Check,
-} from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Github, HelpCircle, User, Settings } from 'lucide-react'
 import { invoke } from '@tauri-apps/api/tauri'
 import Link from 'next/link'
 import { Modal } from '@/components/Modal'
 import { Countdown } from '@/components/Countdown'
-import { FaPause, FaPlay } from 'react-icons/fa6'
 import { Button } from '@/components/Button'
 import TimerInput from '@/components/TimerInput'
 
 export default function Home() {
-  const [status, setStatus] = useState("")
-  const [result, setResult] = useState<string[]>([]) // 로그를 배열로 저장
+  const [status, setStatus] = useState('')
   const [showGithubModal, setShowGithubModal] = useState(false)
   const [showHelpModal, setShowHelpModal] = useState(false)
   const [showSettingsModal, setShowSettingsModal] = useState(false)
-  const [timerDuration, setTimerDuration] = useState<number>(3600 * 4) // 기본 타이머 값을 60초로 설정
+  const [timerDuration, setTimerDuration] = useState<number>(3600 * 4) // 기본 타이머 값을 4시간
   const [timeRemaining, setTimeRemaining] = useState<number | null>(
     timerDuration,
   )
-  const logContainerRef = useRef<HTMLDivElement>(null) // 로그 컨테이너의 참조
-  const [isModalOpen, setIsModalOpen] = useState<string | null>(null) // 모달의 열림 상태
-
 
   const checkRamMapExists = async () => {
     try {
-      const exists = await invoke<boolean>('check_rammap_exists');
+      const exists = await invoke<boolean>('check_rammap_exists')
       if (exists) {
-        setStatus("RamMap already exist.")
+        setStatus('RamMap already exist.')
       } else {
-        setStatus("RamMap not exist > 설정 아이콘을 눌러 RamMap을 설치해주세요.")
+        setStatus(
+          'RamMap not exist > 설정 아이콘을 눌러 RamMap을 설치해주세요.',
+        )
         // UI 업데이트 로직 추가 가능 (예: RamMap이 없음을 알림)
       }
     } catch (error) {
-      console.error('Error checking RamMap existence:', error);
+      console.error('Error checking RamMap existence:', error)
       // 에러 처리
     }
-  };
+  }
 
   useEffect(() => {
-    checkRamMapExists();
-  }, []);
+    checkRamMapExists()
+  }, [])
 
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null
@@ -77,47 +65,34 @@ export default function Home() {
     }
   }, [timerDuration])
 
-  useEffect(() => {
-    // 로그가 업데이트될 때마다 스크롤을 맨 아래로 이동
-    if (logContainerRef.current) {
-      logContainerRef.current.scrollTop = logContainerRef.current.scrollHeight
-    }
-  }, [result])
-
   const handleEnsureRamMap = async () => {
     try {
       const response = await invoke<string>('ensure_rammap')
       setStatus(response)
-      toast.success(response)
-      setResult((prevResult) => [...prevResult, response])
     } catch (error) {
       const errorMsg = `${error}`
-      toast.error(errorMsg)
       setStatus(errorMsg)
-      setResult((prevResult) => [...prevResult, errorMsg])
     }
   }
 
   const handleExecuteCommands = async () => {
-    toast.success('Executing commands...')
     try {
       const response = await invoke<string>('execute_rammap_commands')
-      setResult((prevResult) => [...prevResult, response])
+      setStatus(response)
     } catch (error) {
       const errorMsg = `${error}`
-      toast.error(errorMsg)
-      setResult((prevResult) => [...prevResult, errorMsg])
+      setStatus(errorMsg)
     }
   }
 
   const handleSetTimerDuration = async (inputDuration: number) => {
     if (inputDuration < 60) {
-      toast.error('Timer must be set to at least 60 seconds.')
+      setStatus('Timer must be set to at least 60 seconds.')
       return
     }
 
     setTimerDuration(inputDuration)
-    toast.success(`Timer updated to ${formatTime(inputDuration)} seconds.`)
+    setStatus(`Timer updated to ${formatTime(inputDuration)} seconds.`)
   }
 
   const formatTime = (seconds: number) => {
@@ -127,15 +102,6 @@ export default function Home() {
     const remainingSeconds = seconds % 60
 
     return `${days}d ${hours}h ${minutes}m ${remainingSeconds}s`
-  }
-
-  const handleClearLogs = () => {
-    setResult([])
-    toast.success('Logs cleared.')
-  }
-
-  const closeModal = () => {
-    setIsModalOpen(null)
   }
 
   return (
@@ -180,7 +146,7 @@ export default function Home() {
           <Button onClick={handleExecuteCommands} className="mt-4 w-full">
             Clean Ram Immediately
           </Button>
-          <p className='mt-1 opacity-70 text-sm'>{status}</p>
+          <p className="mt-1 text-sm opacity-70">{status}</p>
         </div>
       </div>
 

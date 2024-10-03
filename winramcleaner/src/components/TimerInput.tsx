@@ -12,6 +12,7 @@ const TimerInput: React.FC<TimerInputProps> = ({ onUpdateTimer }) => {
   const [minutes, setMinutes] = useState<number>(0)
   const [seconds, setSeconds] = useState<number>(0)
   const [editingField, setEditingField] = useState<string | null>(null)
+  const [buttonText, setButtonText] = useState<string>('Update Timer') // 버튼 텍스트 상태 추가
 
   const daysRef = useRef<HTMLInputElement>(null)
   const hoursRef = useRef<HTMLInputElement>(null)
@@ -115,7 +116,12 @@ const TimerInput: React.FC<TimerInputProps> = ({ onUpdateTimer }) => {
 
   const handleUpdateClick = () => {
     const totalSeconds = calculateTotalSeconds()
-    onUpdateTimer(totalSeconds) // 전체 시간 초로 반환
+    if (totalSeconds < 60) {
+      setButtonText('Timer must be set to at least 60 seconds.') // 버튼 텍스트 변경
+    } else {
+      setButtonText('Update Timer') // 버튼 텍스트 초기화
+      onUpdateTimer(totalSeconds) // 전체 시간 초로 반환
+    }
   }
 
   return (
@@ -129,7 +135,7 @@ const TimerInput: React.FC<TimerInputProps> = ({ onUpdateTimer }) => {
         </div>
       </div>
       <Button className="w-full rounded-sm" onClick={handleUpdateClick}>
-        Update Timer
+        {buttonText} {/* 버튼 텍스트 출력 */}
       </Button>
     </>
   )
