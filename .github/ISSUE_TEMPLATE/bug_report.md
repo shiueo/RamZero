@@ -6,33 +6,32 @@ labels: ''
 assignees: ''
 
 ---
+**버그 설명**
+버그에 대한 명확하고 간결한 설명을 해주세요.
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**재현 방법**
+동작을 재현하는 단계:
+1. '...'로 이동
+2. '....'를 클릭
+3. '....'로 스크롤
+4. 오류 확인
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**예상 동작**
+예상했던 동작에 대한 명확하고 간결한 설명을 해주세요.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**스크린샷**
+해당되는 경우, 문제를 설명하는 데 도움이 되는 스크린샷을 추가해주세요.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**데스크톱 (다음 정보를 작성해주세요):**
+ - OS: [예: iOS]
+ - 브라우저: [예: chrome, safari]
+ - 버전: [예: 22]
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**스마트폰 (다음 정보를 작성해주세요):**
+ - 기기: [예: iPhone6]
+ - OS: [예: iOS8.1]
+ - 브라우저: [예: 기본 브라우저, safari]
+ - 버전: [예: 22]
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+**추가 정보**
+문제에 대한 기타 맥락이나 정보를 여기에 추가해주세요.
