@@ -27,7 +27,7 @@
 RamZero efficiently manages your system's RAM to optimize computer performance. Key advantages include:
 
 - **Automated Memory Management**: Maintain system performance with regular RAM cleanups
-- **Customizable Options**: Supports the same five commands as RAMMap, allowing users to execute targeted memory cleanups:
+- **Customizable Options**: Supports the same five commands as [RAMMap](https://learn.microsoft.com/en-us/sysinternals/downloads/rammap), allowing users to execute targeted memory cleanups:
   - `-accepteula -Ew`: Empty Working Sets
   - `-accepteula -Es`: Empty System Working Sets
   - `-accepteula -Em`: Empty File Cache
