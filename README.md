@@ -11,9 +11,7 @@
 - [Why RamZero?](#-why-ramzero)
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [Browser Support](#-browser-support)
 - [Pull Request Steps](#-pull-request-steps)
-- [Contributing](#-contributing)
 - [License](#-license)
 
 ## 🎨 Features
