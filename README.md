@@ -36,7 +36,7 @@ RamZero efficiently manages your system's RAM to optimize computer performance. 
 1. Download the RamZero installer from the [latest release](https://github.com/shiueo/RamZero/releases/latest).
 2. Run the downloaded installer file.
 3. Follow the on-screen instructions to complete the installation.
-4. Launch RamZero with administrator privileges after the installation is complete.
+4. Launch RamZero with **administrator privileges** after the installation is complete.
 
 ## 🐾 Usage
 <img src="./images/in_app_menu_settings.png" />
