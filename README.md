@@ -28,11 +28,11 @@ RamZero efficiently manages your system's RAM to optimize computer performance. 
 
 - **Automated Memory Management**: Maintain system performance with regular RAM cleanups
 - **Customizable Options**: Supports the same five commands as [RAMMap](https://learn.microsoft.com/en-us/sysinternals/downloads/rammap), allowing users to execute targeted memory cleanups:
-  - `-accepteula -Ew`: Empty Working Sets
-  - `-accepteula -Es`: Empty System Working Sets
-  - `-accepteula -Em`: Empty File Cache
-  - `-accepteula -Et`: Empty Modified Page List
-  - `-accepteula -E0`: Empty Standby List
+  - `-Ew`: Empty Working Sets
+  - `-Es`: Empty System Working Sets
+  - `-Em`: Empty File Cache
+  - `-Et`: Empty Modified Page List
+  - `-E0`: Empty Standby List
 - **Resource Efficient**: Operates with minimal system resources
 - **Transparent Operation**: Works quietly in the background, minimizing disruption to user experience
 
