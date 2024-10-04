@@ -45,7 +45,7 @@ RamZero efficiently manages your system's RAM to optimize computer performance. 
 
 1. **Set Automatic Cleanup**:
    - Go to the settings menu to set the automatic cleanup interval.
-   - Choose from preset time intervals or input a custom value.
+   - Input a custom value (60 seconds - 100 days).
 
 2. **Execute Manual Cleanup**:
    - Click the "Clean Now" button on the main screen.
