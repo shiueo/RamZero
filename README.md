@@ -19,7 +19,7 @@
 - **Automatic RAM Cleanup**: Optimize memory at user-defined intervals
 - **Manual Control**: Execute RAM cleanup instantly with one click
 - **User-Friendly Interface**: Intuitive and sleek design
-- **Customizable Settings**: Adjust the application to fit your specific needs
+- **Built with Rust**: Ensures safety and performance through Rust’s memory safety features
 - **Real-time Monitoring**: Track and visualize memory usage in real-time(in development)
 
 ## 🤖 Why RamZero?
