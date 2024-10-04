@@ -181,7 +181,6 @@ export default function Home() {
         <ul className="mb-4 list-inside list-disc space-y-2">
           <li>Automated memory cleanup at user-defined intervals.</li>
           <li>Manual execution of RAM cleanup commands.</li>
-          <li>Real-time log display of executed commands.</li>
         </ul>
         <h3 className="mb-2 text-lg font-semibold">How to Use:</h3>
         <p>
