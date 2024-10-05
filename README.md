@@ -1,7 +1,7 @@
 # RamZero
 > Efficient and user-friendly RAM optimization tool
 
-[![github release version](https://img.shields.io/github/v/release/shiueo/RamZero.svg?include_prereleases)](https://github.com/shiueo/RamZero/releases/latest) [![npm version](https://img.shields.io/npm/v/@toast-ui/editor.svg)](https://www.npmjs.com/package/@toast-ui/editor) [![license](https://img.shields.io/github/license/shiueo/RamZero.svg)](https://github.com/shiueo/RamZero/blob/master/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/shiueo/RamZero/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) [![code with hearth by shiüo](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-shiüo-ff1414.svg)](https://github.com/shiueo)
+[![github release version](https://img.shields.io/github/v/release/shiueo/RamZero.svg?include_prereleases)](https://github.com/shiueo/RamZero/releases/latest) [![license](https://img.shields.io/github/license/shiueo/RamZero.svg)](https://github.com/shiueo/RamZero/blob/master/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/shiueo/RamZero/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) [![code with hearth by shiüo](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-shiüo-ff1414.svg)](https://github.com/shiueo)
 
 <img src="./images/in_app_main.png" />
 
